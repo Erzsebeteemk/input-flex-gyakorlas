@@ -1,0 +1,65 @@
+label {
+    background-color: blue;
+}
+
+input {
+    background-color: aquamarine;
+}
+
+.barna {
+    background-color: rgb(187, 33, 33);
+}
+
+.piros {
+    background-color: red;;
+}
+
+.flexzold {
+    background-color: rgb(116, 206, 56);
+}
+
+body {
+    background-color: rgb(145, 14, 145);
+}
+
+
+/* K: Kérdés
+40. sorból 52. sor (flex)
+41. sor (padding, content pont hol van az ábrán?)
+36. sor (Emiatt nyúlik picit túl a piros (mert ezt örökli a zöld group-tól a -1rem-et)? Miért kell egyáltalán -1rem?
+58. sor (Kell külön doboz a label-nek és inputnak? Nem egyszerűbb az elején block elemmé tenni őket?
+*/
+
+.flexzold {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -1rem 1rem -1rem;
+  }
+  
+.barna, .piros {
+    flex: 0 1 100%;
+    padding: 0 1rem;
+  }
+
+   @media (min-width: 413px) {
+
+        .barna {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+        }
+        
+        .piros {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+        }
+    
+      
+        label, input {
+        display: block;
+        width: 100%;
+        }
+  
+        label {
+        max-width: 100%;
+        }
+
